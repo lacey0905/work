@@ -1,0 +1,29 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "charset": "^1.0.1",
+    "del": "^3.0.0",
+    "express": "4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-charset": "0.0.3",
+    "gulp-prefix": "0.0.15",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-watch": "^5.0.1",
+    "gulp.spritesmith-multi": "^3.1.0",
+    "merge-stream": "^1.0.1",
+    "mysql": "2.15.0",
+    "prefix": "^1.0.0",
+    "run-sequence": "^2.2.1",
+    "sass": "^1.15.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

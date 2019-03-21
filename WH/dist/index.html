@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>WITH HEREOS</title>
+    <link rel="stylesheet" href="./css/jquery.fullpage.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./js/jquery.fullpage.js"></script>
+    <script src="./js/action.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            verticalCentered: false,
+            css3:false,
+            afterRender: function () {
+                $.fn.fullpage.silentMoveTo(3);
+            },
+            onLeave: function(anchorLink, index){
+                if(index >= 2){
+                    $("#header").addClass("small");
+                } else {
+                    $("#header").removeClass("small");
+                }
+
+                $(".lnb").find("[data-lnb]").removeClass("active");
+                $(".lnb").find("[data-lnb]").eq(index-1).addClass("active");
+            },
+            afterLoad: function(anchorLink, index){
+                if(index == 2){
+                    $(".booking_form").addClass("action");
+                } else {
+                    $(".booking_form").removeClass("action");
+                }
+
+                if(index == 3){
+                    $(".introduce_world_view").addClass("action");
+                } else {
+                    $(".introduce_world_view").removeClass("action");
+                }
+            }
+        });
+
+        $(".input_tel").focus(function(){
+            // $(".placeholder").hide();
+            $(this).addClass("focus");
+        });
+
+        $(".input_tel").blur(function(){
+            if($(this).val() == ""){
+                $(this).removeClass("focus");
+            }
+        });
+
+    });
+
+    function isNumber(_input){
+        var value = _input.val();
+        if(value.match(/([^0-9])/) != null) {
+            alert("숫자만 입력해주세요.");
+            _input.val(value.replace(/[^0-9]/g,""));
+        }
+    }
+    
+</script>
+<div id="wrap">
+<!-- HEADER -->
+<header id="header">
+    <div class="wid_inner">
+        <h1 id="logo"><a href="#">WITH HEROES</a></h1>
+        <nav class="navition">
+            <ul class="lnb">
+                <li data-lnb="main"><a href="#main">메인</a></li>
+                <li data-lnb="booking"><a href="#booking">사전예약</a></li>
+                <li data-lnb="introduce"><a href="#introduce">게임소개</a></li>
+                <li data-lnb="fun"><a href="#fun">FUN</a></li>
+            </ul>
+            <dl class="language">
+                <dt class="lang_user">한국어</dt>
+                <dd class="lang_select">
+                    <ul>
+                        <li><a href="#">한국어</a></li>
+                        <li><a href="#">영어</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </nav>
+    </div>
+</header>
+<!-- //HEADER -->
+<!-- CONTENT -->
+<section id="fullpage">
+    <!-- 메인 -->
+    <article id="main" class="section">
+        <h2 class="main_logo">WITH HEROES, SUB TITLE</h2>
+        <button class="btn_play_video">소개 영상 버튼</button>
+        <a href="#" class="btn_go_introduce">사전예약 바로가기</a>
+    </article>
+    <!-- //메인 -->
+    <!-- 사전예약 -->
+    <article id="booking" class="section">
+        <div class="section_head booking_head">
+            <h2 class="blind">사전예약</h2>
+            <p class="blind">
+                <span>사전예약을 신청하면 참여보상과 특별한 혜택을 드립니다.</span>
+                <em>2019.00.00 ~ 정식 오픈 전까지</em>            
+            </p>
+            <button class="btn_booking_notice">유의사항</button>
+        </div>
+        <div class="booking_form">
+            <div class="banner">
+            </div>
+            <div class="form">
+                <fieldset class="form_phone_number">
+                    <legend class="blind">사전예약 하기</legend>
+                    <div class="form_select_os">
+                        <div id="checkGoogle" class="os">
+                            <input type="radio" id="google" name="osType" class="radio" checked>
+                            <label class="label" for="google">Google Play</label>
+                        </div>
+                        <div id="checkApple" class="os">
+                            <input type="radio" id="apple" name="osType" class="radio">
+                            <label class="label" for="apple">App Store</label>
+                        </div>
+                    </div>
+                    <div class="form_insert_tel">
+                        <input type="tel" class="input_tel" maxlength="11" onkeyup="isNumber($(this))">
+                    </div>    
+                    <div class="form_agree">
+                        <input type="checkbox" id="agree" name="agree" class="check_agree">
+                        <label for="agree" class="check_agree_label">개인정보 수집 이용 및 이벤트 등 프로모션 수신동의</label>
+                        <button class="btn_agree_more">자세히 보기</button>
+                    </div>
+                    <div class="form_btn">
+                        <a href="#" class="btn_submit">사전 예약하기</a>
+                        <a href="#" class="btn_opt">구글 사전 예약</a>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </article>
+    <!-- //사전예약 -->
+    <!-- 게임소개 -->
+    <article id="introduce" class="section">
+        <div class="section_head introduce_head">
+            <h2 class="blind">사전예약</h2>
+            <p class="blind">
+                <span>사전예약을 신청하면 참여보상과 특별한 혜택을 드립니다.</span>
+                <em>2019.00.00 ~ 정식 오픈 전까지</em>            
+            </p>
+            <button class="btn_booking_notice">유의사항</button>
+        </div>
+
+        <ul class="introduce_nav">
+            <li data-iNav="world_view" class="active">세계관</li>
+            <li data-iNav="character">캐릭터</li>
+            <li data-iNav="content">콘텐츠</li>
+        </ul>
+
+        <div class="introduce_menu" data-iPage="menu">
+            <ul class="menu">
+                <li class="item" data-menu="world_view">
+                    <strong class="blind">WORLD VIEW, 세계관</strong>
+                    <button>세계관 페이지 열기</button>
+                </li>
+                <li class="item" data-menu="character">
+                    <strong class="blind">CHARACTER, 캐릭터</strong>
+                    <button>캐릭터 페이지 열기</button>
+                </li>
+                <li class="item" data-menu="content">
+                    <strong class="blind">CONTENT, 캐릭터</strong>
+                    <button>콘텐츠 페이지 열기</button>
+                </li>
+            </ul>
+        </div>
+        <div class="introduce_world_view" data-iPage="world_view">
+            <h3 class="world_title">WORLD VIEW, 세계관</h3>
+            <p class="world_script" data-script="a">
+                광활한 우주 수 많은 차원이 존재하고,
+                차원을 관리하는 신과 같은 존재가 군림한다.
+                호시탐탐 차원을 점령하려는 [마계]신 헤파고라스
+                영원한 우주의 평화를 꿈꾸는 [환계]신 아레테라스,
+                인류의 번성과 안락한 미래를 꿈꾸는 [중계(지구)]신 어스.
+                그들은 각자가 추구하는 방향으로 긴 시간 평화를 유지하고 있었다.
+            </p>
+            <p class="world_script" data-script="b">
+                평화도 잠시… 
+                만반의 준비를 끝낸 [마계]로 부터 [환계]가 점령당한다. 
+                [중계(지구)]는 [마계]의 침공을 방어하기 위해
+                안식처의 봉인을 해제하고 “특별한 인간에게” 안식처로부터 
+                영웅들의 영혼을 소환할 수 있는 권능을 부여하여 [마계]의 침공으로부터
+                지구를 수호하고자 처절한 전투가 시작되는데…
+            </p>
+            <p class="world_script" data-script="c">
+                "특별한 인간이" 되어 전세계 영웅을 소환하고 싶다면,
+                지금부터 WITH HEROES 세계에서 함께하세요.
+            </p>
+        </div>
+
+        <div class="introduce_character" data-iPage="character">
+            <ul class="area_nav">
+                <li data-area="as" class="active">AS</li>
+                <li data-area="us">US</li>
+                <li data-area="csa">CSA</li>
+            </ul>
+            <div class="character_list" data-char-area="as">
+                <ul class="list">
+                    <li class="char_item" data-char-num="0">
+                        <div class="char_modal">이순신</div>
+                        <div class="char_name">
+                            <h3 class="blind">이순신</h3>
+                            <p class="blind">1545~1598, KOREA</p>
+                            <p class="blind">필사즉생 필생즉사</p>
+                        </div>
+                        <div class="char_video">
+                            
+                        </div>
+                        <a href="#" class="char_info_link">업적 바로가기</a>
+                    </li>
+                </ul>
+                <ul class="nav_list">
+                    <li data-char-nav="0">무사시</li>
+                    <li data-char-nav="1" class="active"></li>
+                    <li data-char-nav="2"></li>
+                    <li data-char-nav="3"></li>
+                    <li data-char-nav="4"></li>
+                    <li data-char-nav="5"></li>
+                    <li data-char-nav="6"></li>
+                    <li data-char-nav="7"></li>
+                    <li data-char-nav="8"></li>
+                    <li data-char-nav="9"></li>
+                    <li data-char-nav="10"></li>
+                    <li data-char-nav="11"></li>
+                    <li data-char-nav="12"></li>
+                    <li data-char-nav="13"></li>
+                    <li data-char-nav="14"></li>
+                    <li data-char-nav="15"></li>
+                    <li data-char-nav="16"></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <!-- //게임소개 -->
+    <!-- FUN -->
+    <article id="fun" class="section">
+
+    </article>
+    <!-- //FUN -->
+</section>
+<!-- //CONTENT -->
+<footer id="footer">
+    
+</footer>
+</body>
+</html>
