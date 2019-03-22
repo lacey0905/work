@@ -468,7 +468,9 @@ body {
         }
         &[data-iPage="character"] {
             background-image:url(../images/v_character.jpg);
-            z-index:20;
+        }
+        &[data-iPage="content"] {
+            background-image:url(../images/v_content.jpg);
         }
     }
 
@@ -742,5 +744,351 @@ body {
                 box-shadow: 0 3px 7px rgba(0,0,0,0.6);
             }
         }
+    }
+
+    .introduce_content {
+        .content_slide {
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin:-370px 0 0 -650px;
+            .controls {
+                .prev, 
+                .next {
+                    position: absolute;
+                    top:50%;
+                    margin-top:-110px;
+                }
+                .prev {
+                    left:-142px;
+                    @include setImg(107, 221, content_slide_prev)
+                }
+                .next {
+                    right:-142px;
+                    @include setImg(107, 221, content_slide_next)
+                }
+            }
+            .slide {
+                
+            }
+        }
+    }
+
+}
+
+
+#fun {
+    .fun_menu {
+        .title {
+            @include setImg(313, 111, fun_menu_title);
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin:-300px 0 0 -157px;
+        }
+        .nav {
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin:-150px 0 0 -557px;
+            text-align:center;
+            font-size:0;
+            [data-fun-nav="fortune"]{
+                @include setActive(463, 503, fun_menu_fortune);
+            }
+            [data-fun-nav="previous_life"]{
+                @include setActive(463, 503, fun_menu_previous);
+            }
+            [data-fun-nav] {
+                position: relative;
+                top:0;
+                display:inline-block;
+                margin:0 47px;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    top:-25px;
+                }
+            }
+        }
+    }
+
+    .fun_fortune {
+        h2.title {
+            @include setImg(383, 141, fortune_title);
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin:-350px 0 0 -191px;
+        }
+        .fortune_form {
+            @include setImg(1033, 208, fortune_form);
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin:-170px 0 0 -516px;
+            overflow: hidden;
+            .form_area {
+                width:659px;
+                height:100%;
+                padding:20px;
+                box-sizing:border-box;
+                float:left;
+                .user_info {
+                    height:84px;
+                    overflow: hidden;
+                    margin:0 0 0 46px;
+                    .form_radio {
+                        position: relative;
+                        width:100px;
+                        height:100%;
+                        margin-right:17px;
+                        float:left;
+                        label {
+                            position: absolute;
+                            top:35px;
+                            left:1px;
+                            display:block;
+                            width:100%;
+                            height:28px;
+                            cursor: pointer;
+                        }
+                        input:checked + label {
+                            background:url(../images/icon_check.png) no-repeat center left;
+                        }
+                    }
+                    .form_txt {
+                        padding:26px 0 0 74px;
+                        float:left;
+                        label { display:none; }
+                        input {
+                            display:block;
+                            width:233px;
+                            height:46px;
+                            border:0;
+                            padding:0 20px;
+                            outline: none;
+                            text-align:center;
+                            font-size:18px;
+                            box-sizing:border-box;
+                            color:#333;
+                        }
+                    }
+                }
+                .birthday {
+                    text-indent:0;
+                    padding:10px 0 0 127px;
+                    overflow: hidden;
+                    .birth_sel {
+                        margin-right:10px;
+                        float:left;
+                        &.year { width:129px; }
+                        &.month { width:103px; }
+                        &.day { width:103px; }
+                        &.type { width:95px; }
+                        select {
+                            width:100%;
+                            border:0;
+                            height:47px;
+                            font-size:18px;
+                            color:#333;
+                            text-indent:18px;
+                            outline:none;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .btn_fortune_submit {
+                position: absolute;
+                top: 46px;
+                right: 67px;
+                width: 307px;
+                height: 115px;
+                text-indent:-9999px;
+            }
+        }
+
+        .fortune_result {
+            position: absolute;
+            top:50%;
+            left:50%;
+            width:995px;
+            height:210px;
+            margin:40px 0 0 -496px;
+            text-align:center;
+            font-size:26px;
+            line-height:39px;
+            color:#000;
+            display:table;
+            .result {
+                display:table-cell;
+                vertical-align:middle;
+            }
+        }
+    }
+
+    .share_area {
+        position: absolute;
+        top:50%;
+        left:50%;
+        width:995px;
+        margin:260px 0 0 -430px;
+        h3.title { @include setImg(995, 71, share_title); }
+        .sns_link {
+            font-size:0;
+            text-align:center;
+            li {
+                display:inline-block;
+                margin:24px 12px 0;
+                a {
+                    display:block;
+                }
+            }
+            .icon_facebook { a { @include setImg(52, 52, icon_sns_facebook); }}
+            .icon_twitter { a { @include setImg(52, 52, icon_sns_twitter); }}
+        }
+        &.dark {
+            margin:260px 0 0 -497px;
+            h3.title { @include setImg(995, 71, share_title_b); }
+        }
+    }
+
+    .fun_previous_life {
+        h2.title {
+            @include setImg(494, 142, previous_title);
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin:-360px 0 0 -247px;
+            z-index:100;
+        }
+        .previous_form {
+            @include setImg(1033, 157, previous_form);
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin:-190px 0 0 -516px;
+            &:after {
+                content:"Characters";
+                position: absolute;
+                top:150px;
+                left:0;
+                display:block;
+                @include setImg(1033, 362, previous_characters);
+            }
+            #previous_name {
+                position: absolute;
+                top: 45px;
+                left: 68px;
+                width: 433px;
+                height: 66px;
+                border: 0;
+                padding:20px;
+                box-sizing: border-box;
+                text-align:center;
+                font-size:18px;
+                color:#333;
+                outline:none;
+            }
+            .btn_previous_submit {
+                position: absolute;
+                top: 45px;
+                left: 533px;
+                width: 433px;
+                height: 66px;
+                text-indent:-9999px;
+            }
+        }
+
+        .previous_result {
+            @include setImg(1095, 747, previoud_result_bg);
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin:-400px 0 0 -547px;
+            text-indent:0;
+            .previous_subject {
+                position: absolute;
+                top:50%;
+                left:50%;
+                margin:-150px 0 0 -495px;
+                font-size:20px;
+                text-align:center;
+                color:#fff;
+                .previous_name {
+                    display:block;
+                    font-size:50px;
+                    font-weight:bold;
+                    color:#f8bb42;
+                }
+            }
+            .previous_info {
+                position: absolute;
+                top:50%;
+                left:50%;
+                margin:-100px 0 0 230px;
+                font-size:18px;
+                color:#acacac;
+                text-align:center;
+                letter-spacing:-0.040em;
+            }
+            .previous_hash {
+                position: absolute;
+                top:50%;
+                left:50%;
+                margin:20px 0 0 225px;
+                font-size:0;
+                text-align:center;
+                li {
+                    display:inline-block;  
+                    font-size:18px;
+                    color:#9a90e3;
+                    letter-spacing:-0.040em;
+                    margin:0 5px;
+                    &:before {
+                        content:"#";
+                    }  
+                }
+            }
+            .btn_previous_replay {
+                @include setImg(203, 76, btn_previous_replay);
+                position: absolute;
+                top:50%;
+                left:50%;
+                margin:60px 0 0 -470px;
+            }
+            .previous_character {
+                @include setImg(267, 411, previous_char_sample);
+                position: absolute;
+                top:50%;
+                left:50%;
+                margin:-280px 0 0 -133px
+            }
+            &:after {
+                content:"cloud";
+                @include setImg(709, 482, previous_cloud);
+                position: absolute;
+                top:50%;
+                left:50%;
+                font-size:0;
+                margin:-190px 0 0 -354px;
+            }
+        }
+    }
+
+    [data-fPage] {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-attachment:fixed;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:center;
+        &[data-fPage="menu"] { background-image:url(../images/v_fun.jpg); }
+        &[data-fPage="fortune"] { background-image:url(../images/v_fortune.jpg); }
+        &[data-fPage="previous_life"] { background-image:url(../images/v_previous_life.jpg); }
     }
 }

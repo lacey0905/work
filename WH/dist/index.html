@@ -19,7 +19,7 @@
             verticalCentered: false,
             css3:false,
             afterRender: function () {
-                $.fn.fullpage.silentMoveTo(3);
+                $.fn.fullpage.silentMoveTo(4);
             },
             onLeave: function(anchorLink, index){
                 if(index >= 2){
@@ -202,7 +202,7 @@
             </p>
         </div>
 
-        <div class="introduce_character" data-iPage="character">
+        <div class="introduce_character" data-iPage="character" >
             <ul class="area_nav">
                 <li data-area="as" class="active">AS</li>
                 <li data-area="us">US</li>
@@ -244,10 +244,127 @@
                 </ul>
             </div>
         </div>
+
+        <div class="introduce_content" data-iPage="content" style="display:none;">
+            <div class="content_slide">
+                <ul class="slide">
+                    <li class="item"><img src="./images/content_slide_01.png" alt=""></li>
+                </ul>
+                <div class="controls">
+                    <button class="prev">PREV</button>
+                    <button class="next">NEXT</button>
+                </div>
+            </div>
+        </div>
+
     </article>
     <!-- //게임소개 -->
     <!-- FUN -->
     <article id="fun" class="section">
+
+        <!-- <div class="fun_menu" data-fPage="menu">
+            <h2 class="title">FUN, 재미로 보는 운세와 나의 전생!</h2>
+            <ul class="nav">
+                <li data-fun-nav="fortune">운세</li>
+                <li data-fun-nav="previous_life">운세</li>
+            </ul>
+        </div> -->
+        
+        <!-- <div class="fun_fortune" data-fPage="fortune">
+            <h2 class="title">WITH HEROES, 재미로 보는 초간단 운세</h2>
+            <fieldset class="fortune_form">
+                <legend class="blind">운세 정보 입력</legend>
+                <div class="form_area">
+                    <div class="user_info">
+                        <div class="form_radio">
+                            <input type="radio" id="man" name="gender" checked>
+                            <label for="man">남자</label>
+                        </div>
+                        <div class="form_radio">
+                            <input type="radio" id="woman" name="gender">
+                            <label for="woman">여자</label>
+                        </div>
+                        <div class="form_txt">
+                            <label for="userName">이름</label>
+                            <input type="text" id="userName" name="userName">
+                        </div>
+                    </div>
+                    <div class="birthday">
+                        <label class="blind">생년월일</label>
+                        <div class="birth_sel year">
+                            <select>
+                                <option>2019</option>
+                            </select>
+                        </div>
+                        <div class="birth_sel month">
+                            <select>
+                                <option>1월</option>
+                            </select>
+                        </div>
+                        <div class="birth_sel day">
+                            <select>
+                                <option>1일</option>
+                            </select>
+                        </div>
+                        <div class="birth_sel type">
+                            <select>
+                                <option>양력</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_fortune_submit">운세보기</button>
+            </fieldset>
+
+            <div class="fortune_result">
+                <p class="result">
+                    오늘 하루, 당신의 걱정은 근심걱정 요정이 대신해 줄 예정입니다.<br>
+                    걱정 따윈 요정에게 같기고 오늘 하루만큼은 훌훌 털어버리세요.
+                </p>
+            </div>
+
+            <div class="share_area">
+                <h3 class="title">입력하신 정보는 운세 이외의 용도로 사용하지 않습니다.</h3>
+                <ul class="sns_link">
+                    <li class="icon_facebook"><a href="#">FACEBOOK</a></li>
+                    <li class="icon_twitter"><a href="#">TWITTER</a></li>
+                </ul>
+            </div>
+        </div> -->
+
+        <div class="fun_previous_life" data-fPage="previous_life">
+            <!-- <h2 class="title">WITH HEROES, 나는 전생에 어떤 영웅이었을까?</h2> -->
+            <!-- <fieldset class="previous_form">
+                <legend class="blind">전생 정보 입력</legend>
+                <label for="previous_name" class="blind">이름</label>
+                <input type="text" id="previous_name" name="previous_name">
+                <button class="btn_previous_submit">운세보기</button>
+            </fieldset> -->
+
+            <div class="previous_result">
+                <h3 class="previous_subject">홍길동 님은 전생에 <strong class="previous_name">나이팅게일</strong></h3>
+                <p class="previous_info">
+                    게임을 하면 왠지 모르게<br>
+                    힐러가 끄리는이유...<br>
+                    전생에 엄청난간호사였기 때문에
+                </p>
+                <ul class="previous_hash">
+                    <li>힐러본능</li>
+                    <li>세계정복</li>
+                    <li>평화사랑</li>
+                </ul>
+                <div class="previous_character"></div>
+                <button class="btn_previous_replay">다시하기</button>
+            </div>
+
+            <div class="share_area dark">
+                <h3 class="title">입력하신 정보는 운세 이외의 용도로 사용하지 않습니다.</h3>
+                <ul class="sns_link">
+                    <li class="icon_facebook"><a href="#">FACEBOOK</a></li>
+                    <li class="icon_twitter"><a href="#">TWITTER</a></li>
+                </ul>
+            </div>
+        </div>
 
     </article>
     <!-- //FUN -->

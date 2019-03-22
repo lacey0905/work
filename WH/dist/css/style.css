@@ -660,7 +660,10 @@ body {
 
 #introduce [data-iPage][data-iPage="character"] {
   background-image: url(../images/v_character.jpg);
-  z-index: 20;
+}
+
+#introduce [data-iPage][data-iPage="content"] {
+  background-image: url(../images/v_content.jpg);
 }
 
 #introduce .introduce_nav {
@@ -1266,4 +1269,489 @@ body {
   vertical-align: top;
   cursor: pointer;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+}
+
+#introduce .introduce_content .content_slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -370px 0 0 -650px;
+}
+
+#introduce .introduce_content .content_slide .controls .prev,
+#introduce .introduce_content .content_slide .controls .next {
+  position: absolute;
+  top: 50%;
+  margin-top: -110px;
+}
+
+#introduce .introduce_content .content_slide .controls .prev {
+  left: -142px;
+  width: 107px;
+  height: 221px;
+  text-indent: -9999px;
+  background-image: url("../images/content_slide_prev.png");
+  background-repeat: no-repeat;
+}
+
+#introduce .introduce_content .content_slide .controls .next {
+  right: -142px;
+  width: 107px;
+  height: 221px;
+  text-indent: -9999px;
+  background-image: url("../images/content_slide_next.png");
+  background-repeat: no-repeat;
+}
+
+#fun .fun_menu .title {
+  width: 313px;
+  height: 111px;
+  text-indent: -9999px;
+  background-image: url("../images/fun_menu_title.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -300px 0 0 -157px;
+}
+
+#fun .fun_menu .nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -557px;
+  text-align: center;
+  font-size: 0;
+}
+
+#fun .fun_menu .nav [data-fun-nav="fortune"] {
+  width: 463px;
+  height: 503px;
+  text-indent: -9999px;
+  background-image: url("../images/fun_menu_fortune.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#fun .fun_menu .nav [data-fun-nav="fortune"].active, #fun .fun_menu .nav [data-fun-nav="fortune"]:hover {
+  background-image: url("../images/fun_menu_fortune_active.png");
+}
+
+#fun .fun_menu .nav [data-fun-nav="previous_life"] {
+  width: 463px;
+  height: 503px;
+  text-indent: -9999px;
+  background-image: url("../images/fun_menu_previous.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#fun .fun_menu .nav [data-fun-nav="previous_life"].active, #fun .fun_menu .nav [data-fun-nav="previous_life"]:hover {
+  background-image: url("../images/fun_menu_previous_active.png");
+}
+
+#fun .fun_menu .nav [data-fun-nav] {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  margin: 0 47px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#fun .fun_menu .nav [data-fun-nav]:hover {
+  top: -25px;
+}
+
+#fun .fun_fortune h2.title {
+  width: 383px;
+  height: 141px;
+  text-indent: -9999px;
+  background-image: url("../images/fortune_title.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -350px 0 0 -191px;
+}
+
+#fun .fun_fortune .fortune_form {
+  width: 1033px;
+  height: 208px;
+  text-indent: -9999px;
+  background-image: url("../images/fortune_form.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -170px 0 0 -516px;
+  overflow: hidden;
+}
+
+#fun .fun_fortune .fortune_form .form_area {
+  width: 659px;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+}
+
+#fun .fun_fortune .fortune_form .form_area .user_info {
+  height: 84px;
+  overflow: hidden;
+  margin: 0 0 0 46px;
+}
+
+#fun .fun_fortune .fortune_form .form_area .user_info .form_radio {
+  position: relative;
+  width: 100px;
+  height: 100%;
+  margin-right: 17px;
+  float: left;
+}
+
+#fun .fun_fortune .fortune_form .form_area .user_info .form_radio label {
+  position: absolute;
+  top: 35px;
+  left: 1px;
+  display: block;
+  width: 100%;
+  height: 28px;
+  cursor: pointer;
+}
+
+#fun .fun_fortune .fortune_form .form_area .user_info .form_radio input:checked + label {
+  background: url(../images/icon_check.png) no-repeat center left;
+}
+
+#fun .fun_fortune .fortune_form .form_area .user_info .form_txt {
+  padding: 26px 0 0 74px;
+  float: left;
+}
+
+#fun .fun_fortune .fortune_form .form_area .user_info .form_txt label {
+  display: none;
+}
+
+#fun .fun_fortune .fortune_form .form_area .user_info .form_txt input {
+  display: block;
+  width: 233px;
+  height: 46px;
+  border: 0;
+  padding: 0 20px;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  box-sizing: border-box;
+  color: #333;
+}
+
+#fun .fun_fortune .fortune_form .form_area .birthday {
+  text-indent: 0;
+  padding: 10px 0 0 127px;
+  overflow: hidden;
+}
+
+#fun .fun_fortune .fortune_form .form_area .birthday .birth_sel {
+  margin-right: 10px;
+  float: left;
+}
+
+#fun .fun_fortune .fortune_form .form_area .birthday .birth_sel.year {
+  width: 129px;
+}
+
+#fun .fun_fortune .fortune_form .form_area .birthday .birth_sel.month {
+  width: 103px;
+}
+
+#fun .fun_fortune .fortune_form .form_area .birthday .birth_sel.day {
+  width: 103px;
+}
+
+#fun .fun_fortune .fortune_form .form_area .birthday .birth_sel.type {
+  width: 95px;
+}
+
+#fun .fun_fortune .fortune_form .form_area .birthday .birth_sel select {
+  width: 100%;
+  border: 0;
+  height: 47px;
+  font-size: 18px;
+  color: #333;
+  text-indent: 18px;
+  outline: none;
+  cursor: pointer;
+}
+
+#fun .fun_fortune .fortune_form .btn_fortune_submit {
+  position: absolute;
+  top: 46px;
+  right: 67px;
+  width: 307px;
+  height: 115px;
+  text-indent: -9999px;
+}
+
+#fun .fun_fortune .fortune_result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 995px;
+  height: 210px;
+  margin: 40px 0 0 -496px;
+  text-align: center;
+  font-size: 26px;
+  line-height: 39px;
+  color: #000;
+  display: table;
+}
+
+#fun .fun_fortune .fortune_result .result {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#fun .share_area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 995px;
+  margin: 260px 0 0 -430px;
+}
+
+#fun .share_area h3.title {
+  width: 995px;
+  height: 71px;
+  text-indent: -9999px;
+  background-image: url("../images/share_title.png");
+  background-repeat: no-repeat;
+}
+
+#fun .share_area .sns_link {
+  font-size: 0;
+  text-align: center;
+}
+
+#fun .share_area .sns_link li {
+  display: inline-block;
+  margin: 24px 12px 0;
+}
+
+#fun .share_area .sns_link li a {
+  display: block;
+}
+
+#fun .share_area .sns_link .icon_facebook a {
+  width: 52px;
+  height: 52px;
+  text-indent: -9999px;
+  background-image: url("../images/icon_sns_facebook.png");
+  background-repeat: no-repeat;
+}
+
+#fun .share_area .sns_link .icon_twitter a {
+  width: 52px;
+  height: 52px;
+  text-indent: -9999px;
+  background-image: url("../images/icon_sns_twitter.png");
+  background-repeat: no-repeat;
+}
+
+#fun .share_area.dark {
+  margin: 260px 0 0 -497px;
+}
+
+#fun .share_area.dark h3.title {
+  width: 995px;
+  height: 71px;
+  text-indent: -9999px;
+  background-image: url("../images/share_title_b.png");
+  background-repeat: no-repeat;
+}
+
+#fun .fun_previous_life h2.title {
+  width: 494px;
+  height: 142px;
+  text-indent: -9999px;
+  background-image: url("../images/previous_title.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -360px 0 0 -247px;
+  z-index: 100;
+}
+
+#fun .fun_previous_life .previous_form {
+  width: 1033px;
+  height: 157px;
+  text-indent: -9999px;
+  background-image: url("../images/previous_form.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -190px 0 0 -516px;
+}
+
+#fun .fun_previous_life .previous_form:after {
+  content: "Characters";
+  position: absolute;
+  top: 150px;
+  left: 0;
+  display: block;
+  width: 1033px;
+  height: 362px;
+  text-indent: -9999px;
+  background-image: url("../images/previous_characters.png");
+  background-repeat: no-repeat;
+}
+
+#fun .fun_previous_life .previous_form #previous_name {
+  position: absolute;
+  top: 45px;
+  left: 68px;
+  width: 433px;
+  height: 66px;
+  border: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  outline: none;
+}
+
+#fun .fun_previous_life .previous_form .btn_previous_submit {
+  position: absolute;
+  top: 45px;
+  left: 533px;
+  width: 433px;
+  height: 66px;
+  text-indent: -9999px;
+}
+
+#fun .fun_previous_life .previous_result {
+  width: 1095px;
+  height: 747px;
+  text-indent: -9999px;
+  background-image: url("../images/previoud_result_bg.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -400px 0 0 -547px;
+  text-indent: 0;
+}
+
+#fun .fun_previous_life .previous_result .previous_subject {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -495px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+#fun .fun_previous_life .previous_result .previous_subject .previous_name {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  color: #f8bb42;
+}
+
+#fun .fun_previous_life .previous_result .previous_info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 230px;
+  font-size: 18px;
+  color: #acacac;
+  text-align: center;
+  letter-spacing: -0.040em;
+}
+
+#fun .fun_previous_life .previous_result .previous_hash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 20px 0 0 225px;
+  font-size: 0;
+  text-align: center;
+}
+
+#fun .fun_previous_life .previous_result .previous_hash li {
+  display: inline-block;
+  font-size: 18px;
+  color: #9a90e3;
+  letter-spacing: -0.040em;
+  margin: 0 5px;
+}
+
+#fun .fun_previous_life .previous_result .previous_hash li:before {
+  content: "#";
+}
+
+#fun .fun_previous_life .previous_result .btn_previous_replay {
+  width: 203px;
+  height: 76px;
+  text-indent: -9999px;
+  background-image: url("../images/btn_previous_replay.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 60px 0 0 -470px;
+}
+
+#fun .fun_previous_life .previous_result .previous_character {
+  width: 267px;
+  height: 411px;
+  text-indent: -9999px;
+  background-image: url("../images/previous_char_sample.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -280px 0 0 -133px;
+}
+
+#fun .fun_previous_life .previous_result:after {
+  content: "cloud";
+  width: 709px;
+  height: 482px;
+  text-indent: -9999px;
+  background-image: url("../images/previous_cloud.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0;
+  margin: -190px 0 0 -354px;
+}
+
+#fun [data-fPage] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#fun [data-fPage][data-fPage="menu"] {
+  background-image: url(../images/v_fun.jpg);
+}
+
+#fun [data-fPage][data-fPage="fortune"] {
+  background-image: url(../images/v_fortune.jpg);
+}
+
+#fun [data-fPage][data-fPage="previous_life"] {
+  background-image: url(../images/v_previous_life.jpg);
 }
